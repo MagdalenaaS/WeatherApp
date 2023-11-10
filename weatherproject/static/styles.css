@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Dosis|Quicksand');
 
 body {
-  background: rgb(173,196,206);
-  background: linear-gradient(180deg, rgba(173,196,206,0.6012998949579832) 40%, rgba(251,236,178,0.5844931722689075) 60%);
+  background-image: url(clouds.jpg);
   color: #41444B;
   font-family: Quicksand;
   height: 100vh;
@@ -18,7 +17,8 @@ input[type="text"] {
   margin-bottom: 2px;
   border: none;
   border-radius: 5px;
-  height: auto;
+  height: 20px;
+  width: auto;
 }
 
 .button {
@@ -29,6 +29,8 @@ input[type="text"] {
   margin-bottom: 2px;
   border: none;
   border-radius: 5px;
+  height: 40px;
+  width: 80px;
 }
 
 img {
@@ -42,11 +44,12 @@ img {
 }
 
 .current-weather-container {
-  background-color: #FAF7F0;
+  background-color: #FAF8ED;
   padding: 20px;
   margin: 10px auto;
   max-width: 400px;
   border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .centered-heading {
@@ -63,7 +66,7 @@ img {
 .forecast-box {
   width: calc(100% / 5 - 20px);
   box-sizing: border-box;
-  background-color: #F6F6F6;
+  background-color: #FFECC7;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 10px;
