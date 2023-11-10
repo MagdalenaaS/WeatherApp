@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis|Quicksand');
+
+body {
+  background: rgb(173,196,206);
+  background: linear-gradient(180deg, rgba(173,196,206,0.6012998949579832) 40%, rgba(251,236,178,0.5844931722689075) 60%);
+  color: #41444B;
+  font-family: Quicksand;
+  height: 100vh;
+}
+
+form {
+  text-align: center;
+}
+
+input[type="text"] {
+  padding: 10px;
+  margin: 5px;
+  margin-bottom: 2px;
+  border: none;
+  border-radius: 5px;
+  height: auto;
+}
+
+.button {
+  background-color: whitesmoke;
+  color: #41444B;
+  padding: 10px;
+  margin: 5px;
+  margin-bottom: 2px;
+  border: none;
+  border-radius: 5px;
+}
+
+img {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.current-weather-container {
+  background-color: #FAF7F0;
+  padding: 20px;
+  margin: 10px auto;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.centered-heading {
+  color: #41444B;
+  font-size: 30px;
+}
+
+.forecast-container {
+  display: flex;
+  justify-content: space-between center;
+  flex-wrap: wrap;
+}
+
+.forecast-box {
+  width: calc(100% / 5 - 20px);
+  box-sizing: border-box;
+  background-color: #F6F6F6;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin: 10px;
+}
+  
+
+form {
+  text-align: center;
+  margin: 20px 0;
+}
+
+
+input[type="text"], button {
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  background-color: var(--highlight-color);
+  color: white;
+  cursor: pointer;
+}
+
+
+img {
+  max-width: 50px;
+  max-height: 50px;
+}

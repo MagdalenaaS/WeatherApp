@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App!</title>
+    <meta name="description" content="description"/>
+    <meta name="author" content="author" />
+    <meta name="keywords" content="keywords" />
+    <link rel="stylesheet" href="{% static 'styles.css' %}" type="text/css">
+  </head>
+  <body>
+    <form method="POST">
+      {% csrf_token %}
+      <input type="text" placeholder="Enter City Name" name="city"/>
+      <button type="submit" class="button">Search</button>
+    </form>
+    <div class="container">
+      {% if current_weather_data %}
+        {% if current_weather_data.error %}
+          <p class="error">{{ current_weather_data.error }}</p>
+        {% else %}
+          <h1 class="centered-heading">Weather Today</h1>
+          <div class="current-weather-container">
+            <h2>{{ current_weather_data.day }}</h2>
+            <h3>{{ current_weather_data.city }}</h3>
+            <h4>{{ current_weather_data.temp }}°C</h4>
+            <p>{{ current_weather_data.description }}</p>
+            <img src="http://openweathermap.org/img/w/{{ current_weather_data.icon }}.png" alt="{{ current_weather_data.description }}">
+          </div>
+        {% endif %}
+      {% endif %}
+      {% if forecast %}
+        {% if not current_weather_data.error %}
+          <h1 class="centered-heading">5-Day Forecast</h1>
+          <div class="forecast-container">
+            {% for f in forecast %}
+              {% if f.day != current_weather_data.day %}
+                <div class="forecast-box">
+                  <h2>{{ f.day }}</h2>
+                  <h3>{{ f.min_temp }}°C - {{ f.max_temp }}°C</h3>
+                  <p>{{ f.description }}</p>
+                  <img src="http://openweathermap.org/img/w/{{ f.icon }}.png" alt="{{ f.description }}">
+                </div>
+              {% endif %}
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+    
