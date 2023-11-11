@@ -44,7 +44,8 @@ img {
 }
 
 .current-weather-container {
-  background-color: #FAF8ED;
+  background: rgb(155,190,200);
+  background: linear-gradient(145deg, rgba(155,190,200,0.702140231092437) 28%, rgba(221,242,253,0.702140231092437) 65%);
   padding: 20px;
   margin: 10px auto;
   max-width: 400px;
@@ -66,7 +67,8 @@ img {
 .forecast-box {
   width: calc(100% / 5 - 20px);
   box-sizing: border-box;
-  background-color: #FFECC7;
+  background: rgb(134,167,137);
+  background: linear-gradient(145deg, rgba(134,167,137,0.7441570378151261) 28%, rgba(210,227,200,0.8225884103641457) 65%);
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 10px;
